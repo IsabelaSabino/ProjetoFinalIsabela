@@ -1,0 +1,66 @@
+﻿body {
+}
+.criar {
+    background-color: #ADC4CE;
+    width: 70px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 30px;
+    border: solid 2px #96B6C5;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #ADC4CE;
+    width: 80px;
+    height: 40px;
+    border: solid 3px #96B6C5;
+    color: black;
+    margin-top: 20px;
+}
+
+.btn-danger {
+    margin-left: 10px;
+}
+
+.pesquisa {
+    background-color: #ADC4CE;
+    border-radius: 5px;
+    width: 86px;
+    height: 30px;
+    border: solid 2px #96B6C5;
+    color: black;
+    margin-top: 20px;
+}
+.voltar {
+    background-color: #ADC4CE;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: solid 2px #96B6C5;
+    padding:6px;
+}
+.editar {
+    background-color: #ADC4CE;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: solid 2px #96B6C5;
+    padding: 6px;
+}
+.btns{
+    display:flex;
+    column-gap: 20px;
+}

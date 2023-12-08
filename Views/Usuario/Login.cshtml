@@ -1,0 +1,28 @@
+﻿
+@model ProjetoFinalIsabela.Models.Usuario
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+<div class="text-center">
+    <div>
+        <img src="~/css/logo-clinica (2).png" alt="logo" />
+    </div>
+    <span>ClinicSab</span>
+    <form asp-action ="Login"> 
+        <div>
+            <label asp-for=UsuarioEmail></label>
+            <input asp-for=UsuarioEmail/>
+            <span asp-validation-for="UsuarioEmail"></span>
+        </div>
+        <div >
+            <label asp-for="UsuarioSenha"></label>
+            <input asp-for="UsuarioSenha" type="password" />
+            <span asp-validation-for=UsuarioSenha></span>
+        </div>
+        <h4>@ViewBag.Mensagem</h4>
+        <div>
+            <input class="entrar" type="submit" value="Entrar"/>
+        </div>
+    </form>
+</div>

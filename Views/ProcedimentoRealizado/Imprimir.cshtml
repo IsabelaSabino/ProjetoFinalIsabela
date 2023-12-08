@@ -1,0 +1,68 @@
+﻿@model ProjetoFinalIsabela.Models.ProcedimentoRealizado
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/Imprimir.css" asp-append-version="true" />
+<body>
+    <main>
+        <header class="name-lab">
+            <div><img src="~/css/logo-clinica (2).png" /></div> 
+            <h1>ClinicLab</h1>
+        </header>
+        <div class="info-paci">
+            <div>
+                <span class="bold">PACIENTE:</span>
+                <span>@Html.DisplayFor(model => model.Cliente.ClienteNome)</span>
+            </div>
+            <div>
+                <span class="bold">SEXO:</span>
+                <span style="">@Html.DisplayFor(model => model.Cliente.ClienteSexo)</span>
+            </div>
+            <div>
+                <span class="bold">CPF:</span>
+                <span>@Html.DisplayFor(model => model.Cliente.ClienteCpf)</span>
+            </div>
+            <div>
+                <span class="bold">COLABORADOR:</span>
+                <span>@Html.DisplayFor(model => model.Colaborador.ColaboradorNome)</span>
+            </div>
+        </div>
+        <hr class="hr">
+        <div class="info-exame">
+            <div>
+                <div>
+                    <span class="bold">@Html.DisplayFor(model => model.Procedimento.ProcedimentoNome)</span>
+                </div>
+                <div>
+                    <span>@Html.DisplayFor(model => model.Procedimento.Tipoprocedimento)</span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <span class="bold">DATA E LOCAL</span>
+                    <P>@Html.DisplayFor(model => model.LocalRealizacao.LocalNome) </P>
+                    <P>@Html.DisplayFor(model => model.DataRealizacao) </P>
+                </div>
+            </div>
+        </div>
+        <hr class="hr">
+        <div class="info-exame2">
+            <div>
+                <span class="bold">RESULTADO:</span>
+                <span>@Html.DisplayFor(model => model.ObservacaoRealizacao)</span>
+            </div>
+            <div class="box-exame2">
+                <span class="bold">VALORES DE REFERÊNCIA:</span>
+                <div class="ref">Mulher: 0,6 - 1,2mg/dL</div>
+                <div class="ref">Homem: 0,7 - 1,3mg/dL</div>
+            </div>
+        </div>
+        <hr class="hr">
+        <div class="info-exame3">
+            <span class="bold">METODOLOGIA:</span>
+            <span>Jaffé Automatizado</span>
+        </div>
+    </main>
+</body>
+

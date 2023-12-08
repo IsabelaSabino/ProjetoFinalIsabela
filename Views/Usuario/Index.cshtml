@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ProjetoFinalIsabela.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" />
+<h1>Usuário</h1>
+
+<p class="criar">
+    <a asp-action="Create">Criar</a>
+</p>
+<div>
+    @using (Html.BeginForm("Index", "Usuario", FormMethod.Get))
+    {
+                <p class="search">
+                    Buscar: @Html.TextBox("pesquisa")
+                    <input class="pesquisa" type="submit" value="Pesquisar" />
+                </p>
+    }
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioSenha)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioSenha)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" style="color: #7C96AB;">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" style="color: #7C96AB;">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" style="color: #7C96AB;">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

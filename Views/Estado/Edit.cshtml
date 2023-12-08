@@ -1,0 +1,38 @@
+﻿@model ProjetoFinalIsabela.Models.Estado
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" />
+<h1>Editar</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="EstadoNome" class="control-label"></label>
+                <input asp-for="EstadoNome" class="form-control" />
+                <span asp-validation-for="EstadoNome" class="text-danger"></span>
+            </div>
+            <div class="btns">
+                <div class="form-group">
+                    <input type="submit" value="Salvar" class="btn btn-primary" />
+                </div>
+                <div class="voltar">
+                    <a asp-action="Index">Voltar</a>
+                </div>
+            </div>
+          
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
